@@ -1,0 +1,168 @@
+/* General Styles */
+body, .login-container, .main-container {
+    font-family: 'Calibri', sans-serif;
+    background-color: #cb07ed;
+}
+
+/* Loading GIF Styles */
+.loading-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+    .loading-container img {
+        width: 100px;
+        height: 100px;
+    }
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    .login-box h2 {
+        color: #ff3366;
+        margin-bottom: 20px;
+    }
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+    .input-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+    .login-button:hover {
+        background-color: #ff4b77;
+    }
+
+/* Main Page Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+    .main-container h1 {
+        color: #ff3366;
+        font-size: 2.5em;
+    }
+
+    .main-container h3 {
+        color: #cb07ed;
+        font-size: 1.5em;
+    }
+
+    .main-container p {
+        font-size: 1.2em;
+        color: #333;
+    }
+
+.buttons button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .buttons button:first-child {
+        background-color: #ff3366;
+        color: white;
+    }
+
+    .buttons button:last-child {
+        background-color: #ccc;
+        color: #333;
+    }
+
+.heart img {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.logout-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+    .logout-button:hover {
+        background-color: #ff4b77;
+    }
+
+/* Specific Style for Main Page Background GIF */
+body.main-page {
+    background: url("images/Valentinesdaylove.gif") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Watermark Styles */
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    color: white;
+}

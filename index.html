@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-container" id="loadingContainer">
+        <img src="images/loading.gif" alt="Loading">
+    </div>
+    <div class="main-container">
+        <h1>Will You Be My Valentine?</h1>
+        <h3>Hey Pookiee 🐥🎀</h3>
+        <p>Every time when I see your Eyes 👀, it make my heart skip a beat.♥❣ <br> Will you be my Valentine?</p>
+        <div class="buttons">
+            <button id="yesButton" onclick="showGIFs()">Yes</button>
+            <button id="noButton" onmouseover="showNoGIF()">No</button>
+        </div>
+        <div class="heart" id="heartContainer">
+            <img src="images/Valentinesdaylove.gif" alt="Heart Animation">
+        </div>
+        <button class="logout-button" onclick="showLoading(function() { window.location.href = 'login.html'; })">Logout</button>
+    </div>
+    <div class="watermark">Made with Love,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ Kuchupuchu</div>
+
+    <script>
+        function moveNoButton() {
+            var noButton = document.getElementById("noButton");
+            var container = document.querySelector(".main-container");
+            var containerRect = container.getBoundingClientRect();
+
+            var newX = Math.random() * (containerRect.width - noButton.offsetWidth);
+            var newY = Math.random() * (containerRect.height - noButton.offsetHeight);
+
+            noButton.style.position = "absolute";
+            noButton.style.left = newX + "px";
+            noButton.style.top = newY + "px";
+        }
+
+        function showGIFs() {
+            var heartContainer = document.getElementById("heartContainer");
+            heartContainer.innerHTML = `
+                    <img src="images/hearts.gif" alt="I Love You Hearts">
+                    <img src="images/dance.gif" alt="Dance Love">
+                `;
+        }
+
+        function showNoGIF() {
+            var heartContainer = document.getElementById("heartContainer");
+            heartContainer.innerHTML = `
+                    <img src="images/Catno.gif" alt="Cat No">
+                `;
+            moveNoButton();
+        }
+
+        function showLoading(callback) {
+            var loadingContainer = document.getElementById("loadingContainer");
+            loadingContainer.style.display = "flex";
+            setTimeout(function () {
+                loadingContainer.style.display = "none";
+                callback();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
